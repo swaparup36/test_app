@@ -13,4 +13,11 @@ app.get('/', (req: Request, res: Response) => {
     });
 });
 
+app.get('/health', (req: Request, res: Response) => {
+    res.json({
+        success: true,
+        message: 'Good'
+    });
+});
+
 app.listen(PORT, () => console.log(`Testapp started at port ${PORT}`));
